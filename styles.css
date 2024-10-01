@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #0078D4;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+#date-time {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+nav {
+    background: #0056A1;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    background: #0078D4;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: auto;
+    margin-top: 10%;
+}
+
+.instance {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%; /* Ensures full width on small screens */
+    max-width: 600px; /* Limits the max width on larger screens */
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Full width on small screens */
+    max-width: 150px; /* Limits button width */
+    
+}
+
+button:hover {
+    background-color: #0056A1;
+}
+
+/* Responsive styles */
+@media (min-width: 600px) {
+    main {
+        flex-direction: row; /* Switch to row layout on larger screens */
+        justify-content: center;
+        flex-wrap: wrap; /* Allows wrapping of buttons */
+    }
+
+    button {
+        margin: 5px 10px; /* Adjust button margins */
+        width: auto; /* Reset to auto width on larger screens */
+    }
+
+    .instance {
+        width: 300px; /* Fixed width for instances on larger screens */
+    }
+}

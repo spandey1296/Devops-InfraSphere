@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC2 Instance Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1244.0.min.js"></script>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('date-time').innerText = new Date().toISOString().replace('T', ' ').substring(0, 19);;
+        }
+        setInterval(updateTime, 1000); // Update every second
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to DevOps Management Portal</h1>
+        <div id="date-time"></div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">Contribution Portfolio</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <button onclick="updateInstance()">Server Name</button>
+            <select id="instance-dropdown"></select>
+        </div>
+        <div>
+            <button onclick="changeInstanceState('start')">Start</button>
+            <button onclick="changeInstanceState('stop')">Stop</button>
+            <button onclick="changeInstanceState('reboot')">Reboot</button>
+            <button onclick="changeInstanceState('terminate')">Terminate</button>
+            <button onclick="changeInstanceState('hibernate')">Hibernate</button>
+        </div>
+        <div id="instance-details"></div>
+    </main>
+    <footer>
+        <p>© 2024 learnwithshivant.com</p>
+        <p>Address: 123 DevOps Lane, Tech City, TX 75001</p>
+        <p>Email: support@learnwithshivant.com | Phone: (123) 456-7890</p>
+        <p>Follow us on <a href="#">Twitter</a>, <a href="#">LinkedIn</a>, <a href="#">GitHub</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
